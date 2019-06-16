@@ -181,3 +181,41 @@
     }
   }
 }
+.gift-icon{
+    position: fixed;
+    z-index: 200;
+    bottom: 300px;
+    right: 20px;
+    cursor: pointer;
+    img{
+        width: 55px;
+        animation-name: gift;
+        animation-duration: 1.5s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+        animation-play-state: running;
+}
+}
+@keyframes gift{
+    0%{
+        transform: translateY(0)    ;
+        -webkit-transform: translateY(0)    ;
+        -moz-transform: translateY(0)    ;
+        -ms-transform: translateY(0)    ;
+        -o-transform: translateY(0)    ;
+}
+    50%{
+        transform: translateY(-10px)    ;
+        -webkit-transform: translateY(-10px)    ;
+        -moz-transform: translateY(-10px)    ;
+        -ms-transform: translateY(-10px)    ;
+        -o-transform: translateY(-10px)    ;
+}
+    100%{
+        transform: translateY(0)    ;
+        -webkit-transform: translateY(0)    ;
+        -moz-transform: translateY(0)    ;
+        -ms-transform: translateY(0)    ;
+        -o-transform: translateY(0)    ;
+}
+}

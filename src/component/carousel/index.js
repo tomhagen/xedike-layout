@@ -63,6 +63,9 @@ class Carousel extends Component {
             </div>
           </form>
         </section>
+        <div className="gift-icon">
+            <img src="./img/gift.svg"/>
+        </div>
       </Fragment>
     );
   }

@@ -1,0 +1,137 @@
+@import "../scss/variables.scss";
+
+.driver {
+  background-image: url("../../img/driver-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 600px;
+  padding: 60px 0;
+  .container {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+
+    margin: auto;
+    .driver-item {
+      text-align: left;
+
+      padding: 50px;
+      opacity: 0.9;
+      flex: 48%;
+      max-width: 48%;
+      margin: 0 1%;
+      .item {
+        margin: 20px 10px 0;
+      }
+      .item-icon {
+        font-size: 52px;
+        color: $bgColor;
+        font-weight: bold;
+      }
+      .item-title {
+        font-size: 24px;
+        font-weight: bold;
+      }
+      .item-content {
+        font-size: 16px;
+        color: $bgColor;
+      }
+
+      .ant-btn {
+        height: 51px;
+        padding: 0 45px;
+        font-size: 16px;
+        font-weight: bold;
+      }
+    }
+    .looking-for {
+      background-color: white;
+    }
+    .be-driver {
+      background-color: $secondaryColor;
+    }
+  }
+}
+//RESPONSIVE
+@media screen and (max-width: 993px) {
+  .driver {
+    height: 650px;
+    padding: 30px 0;
+    .container {
+      .driver-item {
+        flex: 100%;
+        max-width: 100%;
+        margin: 1% 0;
+        padding: 10px;
+        text-align: center;
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .driver {
+    height: 650px;
+    padding: 30px 0;
+    .container {
+      .driver-item {
+   
+        margin: 1% 0;
+        padding: 10px;
+        text-align: center;
+
+        .item-icon {
+          font-size: 30px;
+        }
+        .item-title {
+          font-size: 20px;
+          font-weight: bold;
+        }
+        .item-content {
+          font-size: 14px;
+          color: $bgColor;
+        }
+
+        .ant-btn {
+          height: 40px;
+          padding: 0 45px;
+          font-size: 16px;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 576px) {
+    .driver {
+      height: 650px;
+      padding: 30px 0;
+      .container {
+        .driver-item {
+     
+          margin: 1% 0;
+          padding: 10px;
+          text-align: center;
+  
+          .item-icon {
+            font-size: 20px;
+          }
+          .item-title {
+            font-size: 18px;
+            font-weight: bold;
+          }
+          .item-content {
+            font-size: 14px;
+            color: $bgColor;
+          }
+  
+          .ant-btn {
+            height: 40px;
+            padding: 0 45px;
+            font-size: 16px;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }

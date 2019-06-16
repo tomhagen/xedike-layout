@@ -6,7 +6,8 @@ class header extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      visible: false
+      visible: false,
+      isChangeLogo: false
     };
   }
   showDrawer = () => {
@@ -21,12 +22,29 @@ class header extends Component {
     });
   };
 
+  handleScroll = () => {
+    const currentScroll = window.pageYOffset;
+    if (currentScroll > 300) {
+      this.setState({
+        isChangeLogo: true
+      });
+    } else {
+      this.setState({
+        isChangeLogo: false
+      });
+    }
+  };
+  componentDidMount() {
+    window.addEventListener("scroll", this.handleScroll);
+  }
   render() {
     return (
       <Fragment>
-        <header className="header">
+        <header
+          className={`header ${this.state.isChangeLogo ? "opacity" : ""}`}
+        >
           <div className="container">
-            <div className="header-box">
+            <div className={`header-box ${this.state.isChangeLogo ? "changePadding":""}`}>
               <div className="header-logo">
                 <a>
                   <img src="../img/logo_dealer_two.svg" />
@@ -78,9 +96,8 @@ class header extends Component {
           visible={this.state.visible}
           className="drawer"
         >
-          
-            <img src="../img/logo_dealer_two.svg" className="drawer-logo" />
-          <div className="drawer-overlay"></div>
+          <img src="../img/logo_dealer_two.svg" className="drawer-logo" />
+          <div className="drawer-overlay" />
           <br />
           <ul className="drawer-menu-container">
             <li className="menu-item">
