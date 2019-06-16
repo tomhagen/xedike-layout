@@ -1,0 +1,182 @@
+@import "../scss/variables.scss";
+
+.recent-trips {
+  .container {
+    text-align: center;
+    margin: auto;
+    width: 90%;
+    padding: 5% 0;
+    .box-title {
+      .recent-trips-title {
+        color: black;
+        font-size: 35px;
+        font-weight: 700;
+
+        span {
+          color: $secondaryColor;
+        }
+      }
+      .recent-trips-subtitle {
+        color: $bigTextColor;
+        font-size: 16px;
+      }
+    }
+    .box-trips-card {
+      display: flex;
+
+      flex-wrap: wrap;
+      text-align: center;
+      margin: auto;
+      .card-item {
+        flex: 23%;
+        max-width: 23%;
+        box-shadow: 1px 1px 5px #aaa;
+        position: relative;
+        margin: 10px 1%;
+        .card-body {
+          display: flex;
+          flex-wrap: wrap;
+          color: white;
+          justify-content: space-between;
+
+          .body-left {
+            text-align: left;
+            .body-left-trip-title {
+              font-size: 21px;
+              margin-bottom: 0;
+            }
+            .body-left-trip-day {
+              color: gray;
+              margin-bottom: 0 !important;
+            }
+          }
+          .body-right {
+            padding: 2%;
+            .body-right-price {
+              font-size: 22px;
+              color: $primaryColor;
+            }
+          }
+        }
+        .ant-card-body {
+          background-color: $bgColor;
+          padding: 10px 20px !important;
+        }
+        .underline {
+          margin: auto;
+          background-color: #4e5254;
+          height: 0.5px;
+          width: 90%;
+        }
+        .card-footer {
+          padding: 10px 0;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          color: $bigTextColor;
+        }
+        .card-overlay {
+          display: none;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: auto;
+          background-color: rgba(0, 0, 0, 0.4);
+          padding: 5% 0;
+          opacity: 0.1;
+
+          h2 {
+            color: $primaryColor;
+            font-weight: bold;
+            font-size: 20px;
+          }
+        }
+        &:hover .card-overlay {
+          display: block;
+          transition: 1s all;
+          -webkit-transition: 1s all;
+          -moz-transition: 1s all;
+          -ms-transition: 1s all;
+          -o-transition: 1s all;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+//RESPONSIVE
+@media screen and (max-width: 1200px) {
+  .recent-trips {
+    .container {
+      .box-trips-card {
+        .card-item {
+          flex: 31%;
+          max-width: 31%;
+
+          .card-body {
+            .body-left {
+              .body-left-trip-title {
+                font-size: 19px;
+              }
+            }
+            .body-right {
+              .body-right-price {
+                font-size: 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .recent-trips {
+    .container {
+      .box-trips-card {
+        .card-item {
+          flex: 48%;
+          max-width: 48%;
+          .card-body {
+            .body-left {
+              .body-left-trip-title {
+                font-size: 16px;
+              }
+            }
+            .body-right {
+              .body-right-price {
+                font-size: 16px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 576px) {
+  .recent-trips {
+    .container {
+      .box-trips-card {
+        .card-item {
+          flex: 100%;
+          max-width: 100%;
+
+          .card-body {
+            .body-left {
+              .body-left-trip-title {
+                font-size: 18px;
+              }
+            }
+            .body-right {
+              .body-right-price {
+                font-size: 16px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

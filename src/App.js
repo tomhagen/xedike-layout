@@ -3,6 +3,7 @@ import './App.scss';
 import 'antd/dist/antd.css';
 import Header from './component/header';
 import Carousel from './component/carousel';
+import RecentTrips from './component/recent-trips';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Header/>
       <main className="main">
         <Carousel/>
+        <RecentTrips/>
       </main>
       <footer className="footer"></footer>
     </Fragment>
