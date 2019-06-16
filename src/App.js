@@ -5,6 +5,7 @@ import Header from './component/header';
 import Carousel from './component/carousel';
 import RecentTrips from './component/recent-trips';
 import Driver from './component/driver';
+import Stat from './component/stat';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Carousel/>
         <RecentTrips/>
         <Driver/>
+        <Stat/>
       </main>
       <footer className="footer"></footer>
     </Fragment>

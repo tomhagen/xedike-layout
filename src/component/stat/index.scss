@@ -1,0 +1,136 @@
+@import "../scss/variables.scss";
+
+.stat {
+  background-image: url("../../img/review_bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 600px;
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    width: 90%;
+    padding: 50px 0;
+    .stat-box {
+      flex: 48%;
+      max-width: 48%;
+    }
+    .box-left {
+      padding: 2% 0;
+      position: relative;
+      .img-mac {
+        max-width: 100%;
+      }
+      .img-iphone {
+        max-width: 100%;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        z-index: 150;
+      }
+    }
+    .box-right {
+      display: flex;
+      flex-wrap: wrap;
+      .box-item {
+        flex: 46%;
+        max-width: 46%;
+        margin: 2% 2%;
+        .item {
+          margin: 10px 0;
+        }
+        .item-number {
+          font-size: 40px;
+          color: $primaryColor;
+          font-weight: bold;
+        }
+        .item-title {
+          font-size: 18px;
+          color: white;
+        }
+        .item-content {
+          font-size: 14px;
+          color: $smallTextColor;
+        }
+      }
+    }
+  }
+}
+
+// RESPONSIVE
+@media screen and (max-width: 1200px) {
+  .stat {
+    .container {
+      padding: 20px 0;
+      .stat-box {
+      }
+      .box-left {
+        .img-mac {
+        }
+        .img-iphone {
+          max-width: 42%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 993px) {
+  .stat {
+    height: 780px;
+    .container {
+      text-align: center;
+
+      .stat-box {
+        flex: 98%;
+        max-width: 98%;
+      }
+      .box-left {
+        .img-mac {
+        }
+        .img-iphone {
+          max-width: 42%;
+          top: 30px;
+          left: 80px;
+          z-index: 150;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .stat {
+    .container {
+      .stat-box {
+      }
+      .box-left {
+        .img-mac {
+        }
+        .img-iphone {
+          max-width: 30%;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 576px) {
+  .stat {
+    .container {
+      .stat-box {
+      }
+      .box-left {
+        .img-mac {
+        }
+        .img-iphone {
+          max-width: 30%;
+          top: 100px;
+          left: 80px;
+          z-index: 150;
+        }
+      }
+    }
+  }
+}

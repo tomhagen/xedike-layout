@@ -7,7 +7,7 @@ class driver extends Component {
     return (
       <section className="driver">
         <div className="container">
-          <div className="driver-item looking-for">
+          <div className="driver-item looking-for hvr-grow">
             <Icon type="car" className="item item-icon" />
             <h1 className="item item-title">LOOKING FOR A CAR ?</h1>
             <p className="item item-content">
@@ -18,7 +18,7 @@ class driver extends Component {
               INVENTORY
             </Button>
           </div>
-          <div className="driver-item be-driver">
+          <div className="driver-item be-driver hvr-grow">
             <Icon type="dollar" className="item item-icon" />
             <h1 className="item item-title">WANT TO BE A DRIVER ?</h1>
             <p className="item item-content">
