@@ -24,7 +24,7 @@ class header extends Component {
 
   handleScroll = () => {
     const currentScroll = window.pageYOffset;
-    if (currentScroll > 300) {
+    if (currentScroll > 100) {
       this.setState({
         isChangeLogo: true
       });
@@ -42,6 +42,7 @@ class header extends Component {
       <Fragment>
         <header
           className={`header ${this.state.isChangeLogo ? "opacity" : ""}`}
+          id="header"
         >
           <div className="container">
             <div className={`header-box ${this.state.isChangeLogo ? "changePadding":""}`}>

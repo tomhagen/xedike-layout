@@ -1,5 +1,49 @@
 @import "../scss/variables.scss";
 
+.marquee-box {
+  margin: 13px 0;
+
+  .container {
+    background-color: $primaryColor;
+    width: 80%;
+    margin: auto;
+    padding: 10px 0;
+    overflow: hidden;
+    .marquee {
+      width: 100%;
+      white-space: nowrap;
+      box-sizing: border-box;
+      animation: marquee 40s linear infinite;
+      -webkit-animation: marquee 40s linear infinite;
+      display: flex;
+      
+      &:hover {
+        animation-play-state: paused;
+      }
+      .marquee-content {
+        display: flex;
+        margin: 0 30px;
+        .item-icon {
+          color: white;
+          font-size: 21px;
+        }
+        .item-name {
+          color: $secondaryColor;
+          font-size: 14px;
+        }
+        .item-message {
+          font-size: 14px;
+          color: white;
+        }
+        .item-time {
+          font-size: 14px;
+          color: rgba(255, 255, 255, 0.6);
+        }
+      }
+    }
+  }
+}
+
 .recent-trips {
   .container {
     text-align: center;
@@ -65,7 +109,7 @@
         .underline {
           margin: auto;
           background-color: #4e5254;
-          height: 0.5px;
+          height: 1px;
           width: 90%;
         }
         .card-footer {
@@ -76,34 +120,73 @@
           color: $bigTextColor;
         }
         .card-overlay {
-          display: none;
+          opacity: 0;
+          visibility: hidden;
           position: absolute;
-          top: 0;
+          top: 30px;
           left: 0;
           width: 100%;
           height: auto;
           background-color: rgba(0, 0, 0, 0.4);
-          padding: 5% 0;
+          padding: 18% 0;
           opacity: 0.1;
-
-          h2 {
+          transition: 1s          ;
+          -webkit-transition: 1s          ;
+          -moz-transition: 1s          ;
+          -ms-transition: 1s          ;
+          -o-transition: 1s          ;
+          h2{
             color: $primaryColor;
             font-weight: bold;
             font-size: 20px;
           }
         }
         &:hover .card-overlay {
-          display: block;
-          transition: 1s all;
-          -webkit-transition: 1s all;
-          -moz-transition: 1s all;
-          -ms-transition: 1s all;
-          -o-transition: 1s all;
+          top: 0;
+          visibility: visible;
           opacity: 1;
-        }
+          transition: 1s;
+          -webkit-transition: 1s;
+          -moz-transition: 1s;
+          -ms-transition: 1s;
+          -o-transition: 1s;
+          opacity: 1;
+}
       }
     }
   }
+}
+
+// MARQUEE ANIMATION
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    -o-transform: translateX(100%);
+  }
+  33% {
+    transform: translateX(0%);
+    -webkit-transform: translateX(0%);
+    -moz-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    -o-transform: translateX(0%);
+  }
+  67%{
+    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+}
+  100% {
+    transform: translateX(-200%);
+    -webkit-transform: translateX(-200%);
+    -moz-transform: translateX(-200%);
+    -ms-transform: translateX(-200%);
+    -o-transform: translateX(-200%);
+}
 }
 //RESPONSIVE
 @media screen and (max-width: 1200px) {
